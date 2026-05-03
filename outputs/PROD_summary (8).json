@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-11-09 19:28:37",
+  "version": "PRODUCTION_OPTIMIZED",
+  "deadline": "2025-10-31",
+  "optimizations": [
+    "Broader species ranges (45% coverage)",
+    "Realistic scoring thresholds (90/300)",
+    "Enhanced diversity bonuses",
+    "Range-constrained movement",
+    "Stronger exploration rewards",
+    "Relaxed forest tolerance"
+  ],
+  "config": {
+    "grid_size": 100,
+    "max_steps": 600,
+    "n_episodes_train": 450000,
+    "n_episodes_test": 50,
+    "observation_radius": 12,
+    "species": [
+      "Eulemur_rufifrons"
+    ],
+    "site_quality_threshold": 65,
+    "diversity_threshold": 8,
+    "seed": 42,
+    "curriculum_stages": [
+      {
+        "max_steps": 180,
+        "observation_radius": 7,
+        "train_steps": 40000
+      },
+      {
+        "max_steps": 300,
+        "observation_radius": 10,
+        "train_steps": 120000
+      },
+      {
+        "max_steps": 0,
+        "observation_radius": 12,
+        "train_steps": 240000
+      }
+    ]
+  },
+  "results": {
+    "Eulemur_rufifrons": {
+      "name": "Red-fronted Brown Lemur",
+      "success_rate": 70.0,
+      "unique_sites": 9,
+      "avg_quality": -Infinity,
+      "max_quality": 199.30109057346021,
+      "best_site": [
+        63,
+        43
+      ],
+      "top_5_sites": [
+        [
+          63,
+          43
+        ],
+        [
+          63,
+          60
+        ],
+        [
+          49,
+          39
+        ],
+        [
+          75,
+          42
+        ],
+        [
+          92,
+          57
+        ]
+      ],
+      "top_5_qualities": [
+        199.30109057346021,
+        196.3285933443263,
+        193.60364226098986,
+        188.8777771086721,
+        184.33467071755467
+      ]
+    }
+  }
+}
